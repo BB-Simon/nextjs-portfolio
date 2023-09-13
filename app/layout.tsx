@@ -1,9 +1,13 @@
-import { Providers } from '@components'
+import { Navbar, Providers } from '@components'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto, Open_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Open_Sans({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap', 
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,10 +20,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={roboto.className}>
+      <body className='bg-slate-50 dark:bg-blackmain1 antialiased'>
         <Providers>
           {children}
+          <Navbar />
+          {/* <Footer /> */}
+
         </Providers>
       </body>
       {/* Allow for more hieght on mobile divices */}
