@@ -22,12 +22,17 @@ const config: Config = {
         blackmain1: '#14141C',
         blackmain2: '#161620',
         blackmain3: '#161620',
+        blackmain4: '#212130',
       },
       backgroundImage: {
         'banner-dark': "url('/assets/banner-dark.png')",
         'banner-white': "url('/assets/banner-white.png')",
         'm-banner-dark': "url('/assets/mobile-banner-dark.png')",
         'm-banner-white': "url('/assets/mobile-banner-white.png')",
+        'contact-dark': "url('/assets/contact-dark.png')",
+        'contact-white': "url('/assets/contact-white.png')",
+        'm-contact-dark': "url('/assets/mobile-contact-dark.png')",
+        'm-contact-white': "url('/assets/mobile-contact-white.png')",
       },
       height: {
         'screen-minus-nav-width': "calc(100vh - 64px)",
