@@ -25,7 +25,6 @@ const SectionBanner: FC<SectionBannerProps> = ({}) => {
             </p>
             <div className='my-6'>
               <button className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-xl'>Contact me</button>
-              <button className='py-2 px-6 mx-3 text-sm font-medium border border-[#FF7245] hover:bg-gradient-to-r hover:from-[#FF7245] hover:to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'>Get my resume</button>
             </div>
           </div>
         </div>
