@@ -59,7 +59,7 @@ const SectionPorjects: FC<SectionPorjectsProps> = ({}) => {
             <div 
               key={id} 
               className={cn(
-                'bg-white/75 dark:bg-blackmain2 p-6 mb-[88px] last:mb-[0px] flex flex-col gap-8 rounded-2xl',
+                'bg-white dark:bg-blackmain2 p-6 mb-[88px] last:mb-[0px] flex flex-col gap-8 rounded-2xl hover:outline hover:outline-indigo-500 dark:hover:outline-slate-700',
                 className
               )}
             >
@@ -72,8 +72,8 @@ const SectionPorjects: FC<SectionPorjectsProps> = ({}) => {
                     if(index !== 0){
                       return (
                         <span className='flex items-center' key={index}>
-                          <div className='w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700 mx-4'></div>
-                          <span className='text-sm font-semibold text-slate-200 dark:text-slate-700'>{m}</span>
+                          <div className='w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700 mx-4'></div>
+                          <span className='text-sm font-semibold text-slate-300 dark:text-slate-700'>{m}</span>
                         </span>
                       )
                     } else {
@@ -112,7 +112,7 @@ const SectionPorjects: FC<SectionPorjectsProps> = ({}) => {
                         liveLink,
                       })
                     }}
-                    className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'
+                    className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
                   >
                     See project
                   </button>
@@ -120,7 +120,7 @@ const SectionPorjects: FC<SectionPorjectsProps> = ({}) => {
               </div>
               <div className='relative w-full md:w-1/2 rounded-2xl'>
                 <Image 
-                  className='w-full h-full object-cover rounded-2xl' 
+                  className='w-full h-full object-cover rounded-2xl shadow' 
                   src={image.src} 
                   width="100" 
                   height="100" 

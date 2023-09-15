@@ -219,7 +219,9 @@ const SectionAbout: FC<SectionAboutProps> = ({}) => {
               <Link
                 href='/Badare_basem_resume.pdf'
                 download='Badare Basem Resume'
-                className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'
+                locale={false}
+                target='_blank'
+                className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
               >
                 Get my resume
               </Link>

@@ -49,7 +49,7 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
         'w-full h-full  bg-white/75 dark:bg-blackmain2',
       )}
     >
-      <div className='w-full h-full rounded-tl-[100px] bg-white/75 dark:bg-blackmain4'>
+      <div className='w-full h-full rounded-tl-[100px] bg-white dark:bg-blackmain4'>
         <div className='container mx-auto py-20'>
           <div className={cn(
             'w-full h-full py-12 px-6 bg-m-contact-white md:bg-contact-white dark:bg-m-contact-dark md:dark:bg-contact-dark bg-no-repeat bg-contain bg-[position:100%_0]',

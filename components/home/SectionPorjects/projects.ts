@@ -53,7 +53,7 @@ const projects: Project[] = [
     name: 'Expense Tracker',
     description: 'Expense Tracker is a web app that helps users categorize and manage their transactions for easy expense tracking. Stay organized and gain insights into your spending habits with this very easy-to-use and user-friendly tool.',
     popupDescription: 'Expense Tracker is a web app that helps users categorize and manage their transactions for easy expense tracking. Stay organized and gain insights into your spending habits with this very easy-to-use and user-friendly tool.',
-    image: { src: '/assets/projects/budget-app.svg', title: 'Expense Tracker' },
+    image: { src: '/assets/projects/budget.svg', title: 'Expense Tracker' },
     meta: ['Microverse', 'Back End Dev', '2023'],
     technologies: ['HTML', 'CSS', 'Ruby', 'Ruby on Rails', 'Devise', 'RSpec', 'Tailwind CSS', 'PostgreSQL'],
     sourceLink: 'https://github.com/BB-Simon/budget-app',

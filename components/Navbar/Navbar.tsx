@@ -23,7 +23,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   return (
     <Fragment>
       <nav className={cn(
-        'bg-white/75 dark:bg-blackmain2 z-50 fixed top-0 left-0 right-0 h-16 w-full',
+        'bg-white dark:bg-blackmain2 z-50 fixed top-0 left-0 right-0 h-16 w-full',
         menuOpen ? 'border-b border-slate-50 dark:border-slate-800 md:border-none' : '',
       )}>
         <DesktopNav />
@@ -50,7 +50,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className='block md:hidden fixed top-14 left-0 right-0 bottom-0 bg-white/75 dark:bg-blackmain2 z-50'>
+          <div className='block md:hidden fixed top-14 left-0 right-0 bottom-0 bg-white dark:bg-blackmain2 z-50'>
             <MobileNav handleMenuOpen={handleMenuOpen} />
           </div>
         </Transition>

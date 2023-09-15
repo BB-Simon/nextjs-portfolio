@@ -38,8 +38,8 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ details, handleCloseModal }) 
             if (index !== 0) {
               return (
                 <span className='flex items-center' key={index}>
-                  <div className='w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700 mx-4'></div>
-                  <span className='text-sm font-semibold text-slate-200 dark:text-slate-700'>{m}</span>
+                  <div className='w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700 mx-4'></div>
+                  <span className='text-sm font-semibold text-slate-300 dark:text-slate-700'>{m}</span>
                 </span>
               )
             } else {
@@ -51,7 +51,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ details, handleCloseModal }) 
         </div>
       </div>
       <div className='w-full h-full my-8'>
-        <Image className='w-full h-full' src={image.src} width="100" height="100" alt={image.title} />
+        <Image className='w-full h-full shadow' src={image.src} width="100" height="100" alt={image.title} />
       </div>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         <p className='md:col-span-2 text-sm font-medium text-slate-800 dark:text-slate-400 my-6'>
@@ -72,7 +72,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ details, handleCloseModal }) 
             <Link
               href={liveLink}
               target='_blank'
-              className='py-2 px-6 text-sm font-medium flex items-center justify-between bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'
+              className='py-2 px-6 text-sm font-medium flex items-center justify-between bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
             >
               <span>See Live</span>
               <ArrowUpRightFromCircle className='w-4 h-4 ml-1' />
@@ -80,7 +80,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ details, handleCloseModal }) 
             <Link
               href={sourceLink}
               target='_blank'
-              className='py-2 px-3 text-sm font-medium flex items-center justify-between bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'
+              className='py-2 px-3 text-sm font-medium flex items-center justify-between bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
             >
               <span>See Source</span>
               <Github className='w-4 h-4 ml-1' />

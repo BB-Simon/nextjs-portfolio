@@ -36,7 +36,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ }) => {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-          <div className="bg-white/75 dark:bg-slate-900 w-screen max-w-md flex-auto overflow-hidden rounded text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+          <div className="bg-white dark:bg-slate-900 w-screen max-w-md flex-auto overflow-hidden rounded text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="p-3">
               {themes.map(({ name, type, icon }) => (
                 <div key={type} className="group relative flex gap-x-6 rounded p-3 hover:bg-gray-50 dark:hover:bg-slate-600">
@@ -44,7 +44,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ }) => {
                     {icon}
                   </div>
                   <div>
-                    <button onClick={() => setTheme(type)} className="font-semibold text-gray-900 dark:text-white/75">
+                    <button onClick={() => setTheme(type)} className="font-semibold text-gray-900 dark:text-slate-50">
                       <span>{name}</span>
                       <span className="absolute inset-0" />
                     </button>
