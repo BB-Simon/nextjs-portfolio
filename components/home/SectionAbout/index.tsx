@@ -216,24 +216,24 @@ const SectionAbout: FC<SectionAboutProps> = ({}) => {
               <p className='text-sm font-medium text-slate-800 dark:text-slate-400 my-6'>
                 Grew up in a remote and collaborative environment. Strong skills in JavaScript, Typescript, React, Node, and Ruby on Rails. Passionate about learning cloud computing.
               </p>
-              {/* <Link
-                href='/Badare_basem_resume.pdf'
-                download='Badare Basem Resume'
+              <Link
+                href='/files/Badare_basem_resume.pdf'
+                download
                 locale={false}
                 target='_blank'
                 className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
               >
                 Get my resume
-              </Link> */}
-              <a
+              </Link>
+              {/* <a
                 className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
-                href="/files/Badare_basem_resume.pdf"
+                href="../"
                 target="_blank"
                 download
                 rel="noopener noreferrer"
               >
                 Get my resume
-              </a>
+              </a> */}
 
             </div>
             <div className='col-span-2'>
