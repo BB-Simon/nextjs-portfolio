@@ -1,19 +1,46 @@
 "use client"
 
 import cn from '@lib/cn';
-import { FC } from 'react';
+import { ChangeEvent, FC, useState, useEffect } from 'react';
 import { useForm, ValidationError } from "@formspree/react";
+import { X } from 'lucide-react';
 
 interface SectionContactProps {
   
 }
 
+interface FormDtata {
+  name: string
+  email: string
+  message: string
+}
+
 const SectionContact: FC<SectionContactProps> = ({}) => {
   const [state, handleSubmit] = useForm("mbjvkogw");
+  const [showMessage, setShowMessage] = useState<boolean>(false)
+  const [formData, setFormData] = useState<FormDtata>({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  // if (state.succeeded) {
-  //   return <p>Thanks for your submission!</p>;
-  // }
+  useEffect(() => {
+    setShowMessage(state.succeeded)
+  }, [state.succeeded])
+
+  const handleChnage = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
+
+  const handleOnsubmit = async (e: any) => {
+    e.preventDefault()
+    await handleSubmit({...formData})
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
 
   return (
     <section
@@ -32,13 +59,24 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
               <h1 className='text-3xl md:text-5xl text-center font-bold tracking-wider my-3 text-slate-900 dark:text-slate-300'>
                 Contact me
               </h1>
-              <p className='text-sm font-medium text-center text-slate-800 dark:text-slate-400 my-3'>
+              <p className='text-sm font-medium text-center text-slate-800 dark:text-slate-400 mt-3 mb-16'>
                 If you have an application you are interested in developing, a feature that you need built or a project that needs
                 coding. I’d love to help with it.
               </p>
+              {showMessage ? (
+                <div className='w-full flex justify-between bg-green-600/75 rounded-lg p-3 mb-3'>
+                  <span className='text-sm font-medium  text-slate-100'>
+                    Thanks for contacting me 😊. I will contact you soon.
+                  </span>
+                  <X 
+                    onClick={() => setShowMessage(false) } 
+                    className='w-4 h-4 bg-red-400 p-[1px] rounded text-slate-100 ml-2 cursor-pointer' 
+                  />
+                </div>
+              ) : null}
               <form
-                onSubmit={handleSubmit}
-                className='w-full h-full flex flex-col mt-20 mb-6'
+                onSubmit={handleOnsubmit}
+                className='w-full h-full flex flex-col mt-3 mb-6'
               >
                 <input
                   className={cn(
@@ -50,6 +88,8 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
                   type="text"
                   id='name'
                   name="name"
+                  onChange={handleChnage}
+                  value={formData.name}
                   placeholder="Your name"
                   minLength={3}
                   maxLength={30}
@@ -65,6 +105,8 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
                   type="email"
                   id='email'
                   name="email"
+                  onChange={handleChnage}
+                  value={formData.email}
                   placeholder="Your email"
                   required
                 />
@@ -81,6 +123,8 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
                   rows={10}
                   minLength={5}
                   maxLength={500}
+                  onChange={handleChnage}
+                  value={formData.message}
                   required
                 ></textarea>
                 <input
