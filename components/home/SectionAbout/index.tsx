@@ -229,6 +229,7 @@ const SectionAbout: FC<SectionAboutProps> = ({}) => {
                 className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-lg'
                 href="/files/Badare_basem_resume.pdf"
                 target="_blank"
+                download
                 rel="noopener noreferrer"
               >
                 Get my resume
