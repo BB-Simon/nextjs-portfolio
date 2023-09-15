@@ -1,11 +1,20 @@
+"use client"
+
 import cn from '@lib/cn';
-import { FC } from 'react'
+import { FC } from 'react';
+import { useForm, ValidationError } from "@formspree/react";
 
 interface SectionContactProps {
   
 }
 
 const SectionContact: FC<SectionContactProps> = ({}) => {
+  const [state, handleSubmit] = useForm("mbjvkogw");
+
+  // if (state.succeeded) {
+  //   return <p>Thanks for your submission!</p>;
+  // }
+
   return (
     <section
       id='contact'
@@ -27,7 +36,10 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
                 If you have an application you are interested in developing, a feature that you need built or a project that needs
                 coding. I’d love to help with it.
               </p>
-              <form className='w-full h-full flex flex-col mt-20 mb-6'>
+              <form
+                onSubmit={handleSubmit}
+                className='w-full h-full flex flex-col mt-20 mb-6'
+              >
                 <input
                   className={cn(
                     'inputw-full py-3 px-4 border border-slate-500 bg-transparent outline-none rounded-xl mb-5',
@@ -72,7 +84,7 @@ const SectionContact: FC<SectionContactProps> = ({}) => {
                   required
                 ></textarea>
                 <input
-                  className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-xl'
+                  className='py-2 px-6 text-sm font-medium cursor-pointer bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-50 rounded-xl'
                   type="submit"
                   value="Get in touch"
                 />
