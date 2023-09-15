@@ -22,14 +22,14 @@ const DesktopNav: FC<DesktopNavProps> = ({}) => {
           decorative
           orientation="vertical"
         />
-        <Link href='#about' className='inline-block mx-5'>
+        <Link href='#projects' className='inline-block mx-5'>
           <span className='text-base font-medium text-slate-900 dark:text-slate-300'>Projects</span>
         </Link>
         <Link href='#about' className='inline-block mx-5'>
           <span className='text-base font-medium text-slate-900 dark:text-slate-300'>About</span>
         </Link>
 
-        <Link href='#about' className='inline-block mx-5'>
+        <Link href='#contact' className='inline-block mx-5'>
           <span className='text-base font-medium text-slate-900 dark:text-slate-300'>Contact</span>
         </Link>
       </div>

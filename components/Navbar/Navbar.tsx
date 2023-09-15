@@ -51,7 +51,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           leaveTo="opacity-0"
         >
           <div className='block md:hidden fixed top-14 left-0 right-0 bottom-0 bg-white/75 dark:bg-blackmain2 z-50'>
-            <MobileNav />
+            <MobileNav handleMenuOpen={handleMenuOpen} />
           </div>
         </Transition>
       ) : null}

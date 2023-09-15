@@ -5,6 +5,7 @@ import cn from '@lib/cn';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface SectionAboutProps {
   
@@ -193,10 +194,13 @@ const skills = [
 
 const SectionAbout: FC<SectionAboutProps> = ({}) => {
   return (
-    <section className={cn(
-      'w-full h-full mt-40 rounded-tr-[100px] bg-white/75 dark:bg-blackmain2',
-    )}>
-      <div className='container mx-auto py-10'>
+    <section
+      id='about' 
+      className={cn(
+        'w-full h-full rounded-tr-[100px] bg-white/75 dark:bg-blackmain2',
+      )}
+    >
+      <div className='container mx-auto py-[114px]'>
         <div className={cn(
           // 'w-full h-full py-12 px-6 bg-m-contact-white md:bg-contact-white dark:bg-m-contact-dark md:dark:bg-contact-dark bg-no-repeat bg-contain bg-[position:100%_0]',
           'flex flex-col items-center justify-center',
@@ -207,10 +211,18 @@ const SectionAbout: FC<SectionAboutProps> = ({}) => {
                 About <br /> Myself
               </h1>
               <p className='text-sm font-medium text-slate-800 dark:text-slate-400 my-6'>
-                If you have an application you are interested in developing, a feature that you need built or a project that needs
-                coding. I’d love to help with it.
+                Software developer with a background in building effective software solutions. 4+ years of industry experience, including mentoring 10+ junior developers to achieve concrete goals on a strict deadline.
               </p>
-              <button className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'>Get my resume</button>
+              <p className='text-sm font-medium text-slate-800 dark:text-slate-400 my-6'>
+                Grew up in a remote and collaborative environment. Strong skills in JavaScript, Typescript, React, Node, and Ruby on Rails. Passionate about learning cloud computing.
+              </p>
+              <Link
+                href='/Badare_basem_resume.pdf'
+                download='Badare Basem Resume'
+                className='py-2 px-6 text-sm font-medium bg-gradient-to-r from-[#FF7245] to-[#FF52C4] text-slate-900 dark:text-slate-300 hover:text-slate-50 rounded-lg'
+              >
+                Get my resume
+              </Link>
             </div>
             <div className='col-span-2'>
               <Disclosure defaultOpen>

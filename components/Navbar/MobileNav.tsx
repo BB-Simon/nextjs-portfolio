@@ -4,24 +4,24 @@ import { FC } from 'react'
 import ThemeSwitcher from './ThemeSwitcher'
 
 interface MobileNavProps {
-  
+  handleMenuOpen: () => void
 }
 
-const MobileNav: FC<MobileNavProps> = ({}) => {
+const MobileNav: FC<MobileNavProps> = ({ handleMenuOpen }) => {
   return (
     <div className='w-full h-full flex flex-col justify-between'>
       <ul>
-        <li className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
+        <li onClick={handleMenuOpen} className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
           <Link className='text-slate-900 dark:text-slate-300 text-base font-normal hover:text-slate-900' href='#projects'>
             Projects
           </Link>
         </li>
-        <li className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
+        <li onClick={handleMenuOpen} className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
           <Link className='text-slate-900 dark:text-slate-300 text-base font-normal hover:text-slate-900' href='#about'>
             About
           </Link>
         </li>
-        <li className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
+        <li onClick={handleMenuOpen} className='px-4 py-3 border-b border-slate-50 dark:border-slate-800'>
           <Link className='text-slate-900 dark:text-slate-300 text-base font-normal hover:text-slate-900' href='#contact'>
             Contact
           </Link>
