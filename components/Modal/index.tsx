@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Fragment, FC, ReactNode } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, FC, ReactNode } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 
 interface ModalProps {
-  isOpen: boolean
-  closeModal: () => void
-  children: ReactNode
+  isOpen: boolean;
+  closeModal: () => void;
+  children: ReactNode;
 }
 
 const Modal: FC<ModalProps> = ({ children, isOpen, closeModal }) => {
@@ -44,8 +44,8 @@ const Modal: FC<ModalProps> = ({ children, isOpen, closeModal }) => {
         </div>
       </Dialog>
     </Transition>
-  )
-}
+  );
+};
 
-Modal.displayName = 'Modal';
+Modal.displayName = "Modal";
 export default Modal;

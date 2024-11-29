@@ -1,8 +1,8 @@
-import { 
-  SectionAbout, 
-  SectionBanner, 
-  SectionContact, 
-  SectionPorjects 
+import {
+  SectionAbout,
+  SectionBanner,
+  SectionContact,
+  SectionPorjects,
 } from "@components/home";
 
 export default function Home() {
@@ -13,5 +13,5 @@ export default function Home() {
       <SectionAbout />
       <SectionContact />
     </main>
-  )
+  );
 }
