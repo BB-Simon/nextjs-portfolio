@@ -124,8 +124,8 @@ const SectionPorjects: FC<SectionPorjectsProps> = ({}) => {
                     <Image
                       className="w-full h-full object-cover rounded-2xl shadow"
                       src={image.src}
-                      width="100"
-                      height="100"
+                      width={1920}
+                      height={1080}
                       alt={image.title}
                     />
                   </div>

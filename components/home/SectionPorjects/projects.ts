@@ -18,7 +18,7 @@ const projects: Project[] = [
     description: `TeachBuySell — A P2P digital service marketplace that enable teachers downloading high-quality teaching resources created by other Aussie educators.`,
     popupDescription: `TeachBuySell — A P2P digital service marketplace that enable teachers downloading high-quality teaching resources created by other Aussie educators.`,
     image: {
-      src: "/assets/projects/teachbuysell.svg",
+      src: "/assets/projects/teachbuysell.png",
       title: "TeachBuySell",
     },
     meta: ["TeachBuySell", "Full Stack Developer", "2023"],
@@ -47,7 +47,7 @@ const projects: Project[] = [
     description: `Easely Dashboard— A P2P eCommerce marketplace that reinvents the rental experience and where a seller can create a storefront, list its products and servises, and sell/rent them to customers.`,
     popupDescription: `Easely Dashboard — A P2P eCommerce marketplace that reinvents the rental experience and where a seller can create a storefront, list its products and servises, and sell/rent them to customers.`,
     image: {
-      src: "/assets/projects/easely-dashboard.svg",
+      src: "/assets/projects/easely-dashboard.png",
       title: "Easely Dasboard",
     },
     meta: ["Easely Dasboard", "Full Stack Developer", "2023"],

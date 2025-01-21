@@ -62,12 +62,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           })}
         </div>
       </div>
-      <div className="w-full h-full my-8">
+      <div className="my-8">
         <Image
           className="w-full h-full shadow"
           src={image.src}
-          width="100"
-          height="100"
+          width={1920}
+          height={1080}
           alt={image.title}
         />
       </div>
